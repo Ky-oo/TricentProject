@@ -6,4 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".CreateDepenseActivity">
 
+    <TextView
+        android:id="@+id/textTitre"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Titre : "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textViewBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Budget :"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/textTitre"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <TextView
+        android:id="@+id/textDepences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Dépences"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <EditText
+        android:id="@+id/saisiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/textTitre"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <EditText
+        android:id="@+id/saisiBudget"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <Spinner
+        android:id="@+id/valeur"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="320dp"
+        android:layout_height="19dp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="346dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
