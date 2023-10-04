@@ -1,3 +1,5 @@
+package com.example.tricent;
+
 public class Projet {
 
     private String nom;
@@ -50,5 +52,13 @@ public class Projet {
 
     public void setCategorie(String categorie) {
         this.categorie = categorie;
+    }
+
+    @Override
+    public String toString() {
+        return "Projet{" +
+                "nom='" + nom + '\'' +
+                ", description='" + description + '\''+
+                '}';
     }
 }

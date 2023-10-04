@@ -2,9 +2,15 @@ plugins {
     id 'com.android.application'
 }
 
+
+
 android {
     namespace 'com.example.tricent'
     compileSdk 33
+
+    buildFeatures {
+        viewBinding true
+    }
 
     defaultConfig {
         applicationId "com.example.tricent"
