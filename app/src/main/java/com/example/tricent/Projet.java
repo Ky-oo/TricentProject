@@ -6,9 +6,9 @@ public class Projet {
     private String description;
     private double sommeTotalProvisoire;
     private double sommeActuel;
-    private String categorie;
+    private Categorie categorie;
 
-    public Projet(String nom, String description, String categorie) {
+    public Projet(String nom, String description, Categorie categorie) {
         this.nom = nom;
         this.description = description;
         this.categorie = categorie;
@@ -46,11 +46,11 @@ public class Projet {
         this.sommeActuel = sommeActuel;
     }
 
-    public String getCategorie() {
+    public Categorie getCategorie() {
         return categorie;
     }
 
-    public void setCategorie(String categorie) {
+    public void setCategorie(Categorie categorie) {
         this.categorie = categorie;
     }
 
