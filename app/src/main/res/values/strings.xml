@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tricent</string>
+    <string-array name="devise">
+        <item> Euro €</item>
+        <item> Dollard $</item>
+        <item> Livre £</item>
+    </string-array>
 </resources>
