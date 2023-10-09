@@ -25,7 +25,8 @@
         android:text="Budget :"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/textTitre"
-        tools:layout_editor_absoluteX="28dp" />
+        tools:layout_editor_absoluteX="28dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textDepences"
@@ -46,37 +47,53 @@
         android:id="@+id/saisiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textTitre"
-        tools:layout_editor_absoluteY="133dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textDepences"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/saisiBudget"
         android:layout_width="172dp"
         android:layout_height="41dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="213dp" />
+        app:layout_constraintStart_toEndOf="@+id/textViewBudget"
+        app:layout_constraintTop_toBottomOf="@+id/saisiText"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/valeur"
-        android:layout_width="64dp"
-        android:layout_height="30dp"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:entries="@array/device"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/saisiBudget"
-        tools:layout_editor_absoluteY="224dp" />
+        app:layout_constraintTop_toBottomOf="@+id/saisiText"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerparticipant"
         android:layout_width="320dp"
         android:layout_height="19dp"
+        android:entries="@array/participant"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saisiDate"
         app:layout_constraintVertical_bias="0.12"
-        tools:layout_editor_absoluteX="45dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonAjouter"
