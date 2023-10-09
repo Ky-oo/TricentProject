@@ -70,6 +70,14 @@ public class Projet {
         this.categorie = categorie;
     }
 
+    public String getDevise() {
+        return devise;
+    }
+
+    public void setDevise(String devise) {
+        this.devise = devise;
+    }
+
     @Override
     public String toString() {
         String phrase =  "Projet{" +
