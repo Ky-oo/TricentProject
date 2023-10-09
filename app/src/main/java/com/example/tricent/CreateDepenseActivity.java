@@ -35,6 +35,9 @@ public class CreateDepenseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_depense);
 
+        ActivityCreateDepenseBinding binding = ActivityCreateDepenseBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
         boutonAjouter = findViewById(R.id.buttonAjouter);
         saisiTitre = findViewById(R.id.saisiText);
         saisiBudget = findViewById(R.id.budget);
@@ -53,7 +56,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
         boutonAjouter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Récupérer les valeurs du champNom et champMontant
+
                 String titre = saisiTitre.getText().toString();
                 double montant = Double.parseDouble(saisiBudget.getText().toString());
                 String date = entrerDate.getText().toString();
