@@ -1,17 +1,33 @@
 package com.example.tricent;
 
+import java.util.ArrayList;
+
 public class Projet {
 
     private String nom;
     private String description;
+
+    private String devise;
     private double sommeTotalProvisoire;
     private double sommeActuel;
     private Categorie categorie;
 
-    public Projet(String nom, String description, Categorie categorie) {
+    private ArrayList<User> userList;
+
+    public Projet(String nom, String description, Categorie categorie, String devise) {
         this.nom = nom;
         this.description = description;
         this.categorie = categorie;
+        this.devise = devise;
+        this.userList = new ArrayList<User>();
+    }
+
+    public ArrayList<User> getUserList() {
+        return userList;
+    }
+
+    public void addUserList(User user){
+        this.userList.add(user);
     }
 
     public String getNom() {
@@ -56,9 +72,18 @@ public class Projet {
 
     @Override
     public String toString() {
-        return "Projet{" +
+        String phrase =  "Projet{" +
                 "nom='" + nom + '\'' +
-                ", description='" + description + '\''+
-                '}';
+                ", description='" + description + '\'' +
+                ", devise='" + devise + '\'' +
+                ", sommeTotalProvisoire=" + sommeTotalProvisoire +
+                ", sommeActuel=" + sommeActuel +
+                ", categorie=" + categorie +
+                ", userList=" + userList;
+
+        for (User user:userList) {
+            phrase += ", user=" + user.toString();
+        }
+        return phrase;
     }
 }

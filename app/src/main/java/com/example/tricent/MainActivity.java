@@ -10,12 +10,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    Categorie voyage = new Categorie("voyage");
-    Categorie soiree = new Categorie("soiree");
-    Categorie sortie = new Categorie("sortie");
-    Categorie picnic = new Categorie("picnic");
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
