@@ -8,6 +8,7 @@ android {
     namespace 'com.example.tricent'
     compileSdk 33
 
+
     buildFeatures {
         viewBinding true
     }

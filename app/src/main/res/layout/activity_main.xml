@@ -19,6 +19,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_des_proj"
         android:layout_width="match_parent"
         android:layout_height="566dp"
         android:layout_weight="1" />
