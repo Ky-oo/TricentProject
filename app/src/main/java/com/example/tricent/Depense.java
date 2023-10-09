@@ -13,11 +13,6 @@ public class Depense {
         this.date = date;
         this.personne = personne;
     }
-    public Depense(String titre, double montant, String date) {
-        this.titre = titre;
-        this.montant = montant;
-        this.date = date;
-    }
 
 
     // Getters et setters (si nécessaire)
@@ -49,5 +44,15 @@ public class Depense {
 
     public void setPersonne(String personne) {
         this.personne = personne;
+    }
+
+    @Override
+    public String toString() {
+        return "Depense{" +
+                "titre='" + titre + '\'' +
+                ", montant=" + montant +
+                ", date='" + date + '\'' +
+                ", personne='" + personne + '\'' +
+                '}';
     }
 }
