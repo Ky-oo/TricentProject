@@ -33,10 +33,10 @@ public class CreatProjetActivity extends AppCompatActivity {
 
               Projet newProjet = new Projet(userInputTitre, userInputDescription, new Categorie("soiree"));
 
-              Toast.makeText(CreatProjetActivity.this, newProjet.toString(), Toast.LENGTH_SHORT).show();
+              //Toast.makeText(CreatProjetActivity.this, newProjet.toString(), Toast.LENGTH_SHORT).show();
               Intent resultIntent = new Intent();
               resultIntent.putExtra("ProjetCree", newProjet);
-              setResult(RESULT_OK, resultIntent);
+              setResult(1, resultIntent);
               CreatProjetActivity.super.onBackPressed();
 
           }

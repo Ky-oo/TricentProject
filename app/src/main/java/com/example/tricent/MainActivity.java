@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.tricent.databinding.ActivityMainBinding;
 
@@ -21,7 +22,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Button button;
     private ActivityMainBinding binding;
+    ArrayList<Projet> projets = new ArrayList<Projet>();
 
+    RecyclerViewAdapter myAdapterProjets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        ArrayList<Projet> projets = new ArrayList<Projet>();
-        projets.add(new Projet("Attentiooooon", "UAAAAA", new Categorie("soireeee")));
+
+
+
+
 
         binding.recyclerDesProj.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         binding.recyclerDesProj.setLayoutManager(layoutManager);
         binding.recyclerDesProj.setFocusable(false);
 
-        RecyclerViewAdapter myAdapterProjets= new RecyclerViewAdapter(projets);
+        myAdapterProjets= new RecyclerViewAdapter(projets);
         binding.recyclerDesProj.setAdapter((myAdapterProjets));
     }
     public void openNewActivity(){
@@ -55,15 +60,22 @@ public class MainActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new  ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
-            if (result.getResultCode() == RESULT_OK) {
+            //if (result.getResultCode() == 1) {
+            //Toast.makeText(MainActivity.this, "resultat", Toast.LENGTH_SHORT).show();
                 Intent resultIntent = result.getData();
+            Projet newProjet = (Projet) resultIntent.getSerializableExtra("ProjetCree");
+            Toast.makeText(MainActivity.this, newProjet.toString(), Toast.LENGTH_SHORT).show();
                 if (resultIntent != null) {
-                    Projet newProjet = (Projet) resultIntent.getSerializableExtra("ProjetCree");
+                    Projet newProjet2 = (Projet) resultIntent.getSerializableExtra("ProjetCree");
                     if (newProjet != null) {
                         Log.d("Resultat", newProjet.toString());
+
+                        projets.add(newProjet);
+                        myAdapterProjets.notifyDataSetChanged();
                     }
                 }
-            }
+            //}
         }
 
-    });}
+    });
+}

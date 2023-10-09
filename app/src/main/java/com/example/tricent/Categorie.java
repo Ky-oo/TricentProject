@@ -1,6 +1,8 @@
 package com.example.tricent;
 
-public class Categorie {
+import java.io.Serializable;
+
+public class Categorie implements Serializable {
 
     private  String libelle;
 
