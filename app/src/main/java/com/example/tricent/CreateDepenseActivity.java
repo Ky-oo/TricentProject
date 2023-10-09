@@ -25,7 +25,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
     private Button boutonAjouter;
     private EditText saisiTitre;
     private EditText saisiBudget;
-    private EditText entrerDate;
+    private EditText entreDate;
     private Button boutonDate;
     private Calendar calendar = Calendar.getInstance();
 
@@ -41,7 +41,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
         boutonAjouter = findViewById(R.id.buttonAjouter);
         saisiTitre = findViewById(R.id.saisiText);
         saisiBudget = findViewById(R.id.budget);
-        entrerDate  = findViewById(R.id.saisiDate);
+        entreDate  = findViewById(R.id.saisiDate);
         boutonDate = findViewById(R.id.Date);
 
         boutonDate.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
 
                 String titre = saisiTitre.getText().toString();
                 double montant = Double.parseDouble(saisiBudget.getText().toString());
-                String date = entrerDate.getText().toString();
+                String date = entreDate.getText().toString();
                 String participant = binding.spinnerparticipant.getSelectedItem().toString();
 
 
@@ -94,7 +94,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
                         // Format the selected date into a string
                         String formattedDate = dateFormat.format(selectedDate.getTime());
                         // Update the TextView to display the selected date with the "Selected Date: " prefix
-                        entrerDate.setText(formattedDate);
+                        entreDate.setText(formattedDate);
                     }
                 },
                 calendar.get(Calendar.YEAR),
