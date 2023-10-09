@@ -22,12 +22,12 @@
         android:id="@+id/textViewBudget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:text="Budget :"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/textTitre"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp" />
+        tools:layout_editor_absoluteX="30dp" />
 
     <TextView
         android:id="@+id/textDepences"
@@ -59,27 +59,13 @@
         app:layout_constraintVertical_bias="0.18"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/saisiBudget"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/textViewBudget"
-        app:layout_constraintTop_toBottomOf="@+id/saisiText"
-        tools:ignore="MissingConstraints" />
-
     <Spinner
         android:id="@+id/valeur"
-        android:layout_width="115dp"
-        android:layout_height="56dp"
+        android:layout_width="119dp"
+        android:layout_height="54dp"
         android:entries="@array/device"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toEndOf="@+id/saisiBudget"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.296"
         tools:ignore="MissingConstraints" />
@@ -132,5 +118,17 @@
         app:layout_constraintHorizontal_bias="0.771"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/budget"
+        android:layout_width="116dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/valeur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
