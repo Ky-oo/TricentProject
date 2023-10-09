@@ -2,13 +2,13 @@ package com.example.tricent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.util.Date;
 
 public class CreateDepenseActivity extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class CreateDepenseActivity extends AppCompatActivity {
     private EditText saisiTitre;
     private EditText saisiBudget;
     private EditText entrerDate;
-    private  EditText saisiPersonne;
+    private  Spinner unePersonne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,8 @@ public class CreateDepenseActivity extends AppCompatActivity {
         saisiTitre = findViewById(R.id.saisiText);
         saisiBudget = findViewById(R.id.budget);
         entrerDate  = findViewById(R.id.saisiDate);
+        unePersonne = findViewById(R.id.spinnerparticipant);
+
 
         boutonAjouter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,18 +36,27 @@ public class CreateDepenseActivity extends AppCompatActivity {
                 // Récupérer les valeurs du champNom et champMontant
                 String titre = saisiTitre.getText().toString();
                 double montant = Double.parseDouble(saisiBudget.getText().toString());
-                Date date = new Date(String.valueOf(findViewById(R.id.saisiDate)));
-                String personne = saisiPersonne.getText().toString();
+                String date = entrerDate.getText().toString();
 
-                // Instancier un nouvel objet Dépense
-                Depense nouvelleDepense = new Depense(titre, montant, date, personne);
+
+
+
+                Depense nouvelleDepense = new Depense(titre, montant, date);
+
+                Toast.makeText(CreateDepenseActivity.this, "Dépense ajoutée : " + titre+ " Dépence :"+ montant + " Date : "+ date, + Toast.LENGTH_SHORT).show();
+
+
 
                 // Faire quelque chose avec la nouvelle dépense, par exemple, l'ajouter à une liste
                 // ou la sauvegarder dans une base de données
 
                 // Afficher un message pour indiquer que la dépense a été ajoutée
-                Toast.makeText(CreateDepenseActivity.this, "Dépense ajoutée : " + titre, Toast.LENGTH_SHORT).show();
+
             }
+
+
         });
+
+
     }
 }
