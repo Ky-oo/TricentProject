@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Tricent</string>
+
+    <string-array name="participant">
+        <item> Hamlaoui</item>
+        <item> Anas</item>
+        <item> Kylian</item>
+    </string-array>
+
     <string-array name="devise">
         <item> Euro €</item>
         <item> Dollard $</item>
